@@ -1,0 +1,35 @@
+﻿@*
+   
+*@
+@{
+}
+@model List<LibraryManagementWebApp.Models.Entities.Student>
+
+<h1>Students</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>User Id</th>
+            <th>Student Id</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.UserId</td>
+                <td>@student.StudentId</td>
+                <td>@student.StudentName</td>
+                <td>@student.StudentEmail</td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="UserAdmin" asp-action="EditStudents" asp-route-id="@student.StudentId">Edit</a>
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>

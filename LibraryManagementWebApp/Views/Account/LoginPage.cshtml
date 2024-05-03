@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container login-container">
+<h2 class="text-center">Login</h2>
+<form method="post" action="/Account/LoginPage">
+    <div class="form-group">
+        <label for="userid">UserId:</label>
+        <input type="text" class="form-control" id="userid" name="userid" placeholder="Enter UserId">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary btn-block">Login</button>
+</form>
+</div>

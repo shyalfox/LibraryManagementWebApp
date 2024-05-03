@@ -1,8 +1,9 @@
 ﻿
-using LibraryManagementWebApp.Web.Models.Entities;
+using LibraryManagementWebApp.Models;
+using LibraryManagementWebApp.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace LibraryManagementWebApp.Web.Data
+namespace LibraryManagementWebApp.Data
 {
     public class ApplicationDbContext : DbContext
     {
@@ -10,6 +11,12 @@ namespace LibraryManagementWebApp.Web.Data
         {
         }
         public DbSet<Student> Students { get; set; }
-        
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Book> Books{ get; set; }
+
+        public DbSet<BorrowedBook> BorrowedBooks { get; set; }
+      
+
     }
 }

@@ -1,6 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Admin Login";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="container login-container">
+    <h2 class="text-center">Login</h2>
+    <form>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+        </div><br />
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+    </form>
+</div>

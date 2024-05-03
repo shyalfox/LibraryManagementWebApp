@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@{
+    bool isAuthenticated = User.Identity.IsAuthenticated;
+    bool isAdmin = User.IsInRole("Admin");
+    bool isSuperAdmin = User.IsInRole("SuperAdmin");
+   
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -11,20 +18,49 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">LibraryManagementWebApp</a>
+            <div class="container-fluid  ">
+                <a class="navbar-brand me-5 ms-5"></a>
+                <a class="navbar-brand me-5 ms-5" asp-area="" asp-controller="Account" asp-action="LoginPage">LibraryManagementWebApp</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                    <ul class="navbar-nav flex-grow-1 justify-content-end">
+                        
+                        
+                        @if (isAuthenticated)
+                        {
+                            @if (isSuperAdmin)
+                            {
+                                <li class="nav-item me-2">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserAdmin" asp-action="AddUserAdmin">All Users</a>
+                                    </li>
+                            }
+                            @if (isAdmin)
+                            {
+                                <li class="nav-item me-2">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserAdmin" asp-action="AddUserAdmin">Add User</a>
+                                </li>
+                                <li class="nav-item me-2">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserAdmin" asp-action="ListStudent">All Students</a>
+                                </li>
+                                <li class="nav-item me-2">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserAdmin" asp-action="ListAdmin">All Admins</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Student/ListStudents">Account</a>
+                                </li>
+                            }
+                            <li class="nav-item me-5">
+                                <form method="post" asp-action="Logout" asp-controller="Account">
+                                    <button type="submit" class="btn btn-danger nav-link text-white">Logout</button>
+                                </form>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
