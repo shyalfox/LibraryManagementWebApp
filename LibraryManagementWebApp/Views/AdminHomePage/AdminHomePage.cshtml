@@ -4,50 +4,74 @@
 @{
 }
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - LibraryManagementWebApp</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/LibraryManagementWebApp.styles.css" asp-append-version="true" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Page with Cards</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-b4gt2gfGfgoI1ibF5rK+0POE0Rp6Bp/2L0AIRej9d/D3s0+1V6o5JnYLdOIVcF/l" crossorigin="anonymous">
+    <style>
+        .card {
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit; /* Inherit color from parent element */
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">LibraryManagementWebApp</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                       
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UserAdmin" asp-action="ListStudent">All Students</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UserAdmin" asp-action="ListAdmin">All Admins</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+                <h2 class="text-center">Admin Dashboard</h2>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - LibraryManagementWebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Book Control</h2>
+                <a asp-controller="Book" asp-action="AddBooks" class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Add Books</h5>
+                        <p class="card-text">Addition of New Books</p>
+                    </div>
+                </a>
+                <a asp-controller="Book" asp-action="ListBooks" class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Book List</h5>
+                        <p class="card-text">View Book List and Perform Actions like Edition and Deletion</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Book Status</h2>
+                <a  class="card mb-3" asp-action="AddBorrow"asp-controller="Borrow">
+                    <div class="card-body">
+                        <h5 class="card-title">Add Record</h5>
+                        <p class="card-text">Record Books Borrowed By Students</p>
+                    </div>
+                </a>
+                <a class="card" asp-controller="Borrow" asp-action="ListBorrow">
+                    <div class="card-body">
+                        <h5 class="card-title">Update Record</h5>
+                        <p class="card-text">Record Book Returns and Process Fines </p>
+                    </div>
+                </a>
+            </div>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-   
+    </div>
+
+  
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-j+5rC4m4K4djmdBHG4zjWjROdGGfhxC8X03vl1k/UTBWNFf9jV4ZEoFOVK9Pvxdp" crossorigin="anonymous"></script>
 </body>
 </html>

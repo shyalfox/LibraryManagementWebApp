@@ -22,8 +22,16 @@ namespace LibraryManagementWebApp.Controllers
             // Check if the user is already authenticated
             if (User.Identity.IsAuthenticated)
             {
-                // Redirect to the home page or any other page
-                return RedirectToAction("Index", "Home");
+                bool isAdmin = User.IsInRole("Admin");
+                if (isAdmin)
+                {  
+                    // Redirect to the home page or any other page
+                    return RedirectToAction("AdminHomePage", "AdminHomePage");
+                }
+                else
+                {
+                    return RedirectToAction("StudentHomePage", "StudentHomePage");
+                }
             }
 
             // If not authenticated, render the login page
@@ -65,7 +73,7 @@ namespace LibraryManagementWebApp.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("StudentDashboard", "Student");
+                    return RedirectToAction("StudentHomePage", "StudentHomePage");
                 }
             }
             else

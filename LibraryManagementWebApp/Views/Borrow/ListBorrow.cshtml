@@ -1,0 +1,99 @@
+﻿@model List<LibraryManagementWebApp.Models.BorrowedBook>
+
+@{
+    bool isAdmin = User.IsInRole("Admin");
+
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+  </br></br>
+<h1>Book Record</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Borrow Id</th>
+            <th>Student Id</th>
+            <th>Book Id</th>
+            <th>Borrow Date</th>
+            <th>Expected Return Date</th>
+            <th>Returned</th>
+            <th>Return Date</th>
+            <th>Fine Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.BorrowId</td>
+                <td>@book.StudentId</td>
+                <td>@book.BookId</td>
+                <td>@book.BorrowDate</td>
+                <td>@book.ExpectedReturnDate</td>
+
+                <td>@if (@book.Returned)
+                    {
+                        <p class="ms-4">Yes</p>
+                        
+                    }
+                    else
+                    {
+                        <p class="ms-4">No</p>
+                    }
+                    </td >
+            <td>
+                    @if (@book.ReturnDate== null)
+                    {
+                        <p class="ms-1">Not Returned</p>
+                    }
+                    else
+                    {
+                        @book.ReturnDate
+                    }
+                </td>
+
+
+                <td>@if (@book.FineAmount== 0 && @book.Returned)
+                    {
+                        <p class="ms-3">No fine</p>
+                    }
+                    else if (!@book.Returned)
+                    {
+                        <p class="ms-4">TBA</p>
+                    }
+                    else
+                    {
+                        <p class="ms-4">@book.FineAmount</p>
+                    }
+                </td>
+
+                @if  (isAdmin)
+                {
+
+                    <td class="text-right">
+                        <div class="d-inline">
+                            <a class="btn btn-primary" asp-controller="Borrow" asp-action="EditBorrow" asp-route-id="@book.BorrowId">Edit</a>
+
+                        </div>
+                    </td>
+                }
+               
+            </tr>
+        }
+    </tbody>
+</table>
+@if (isAdmin)
+{
+    
+    <a class="btn btn-secondary ms-2" asp-action="AdminHomePage" asp-controller="AdminHomePage">DashBoard</a>
+}
+else{
+
+    <a class="btn btn-secondary ms-2" asp-action="StudentHomePage" asp-controller="StudentHomePage">DashBoard</a>
+}
+

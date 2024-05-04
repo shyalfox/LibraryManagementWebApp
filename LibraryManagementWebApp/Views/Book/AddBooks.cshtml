@@ -1,0 +1,65 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model LibraryManagementWebApp.Models.AddBooksViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Add New Book</h2>
+        <form method="post">
+            <div class="form-group">
+                <label for="bookTitle">Book Title</label>
+                <input type="text" class="form-control" id="bookTitle" name="bookTitle" asp-for="BookTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" class="form-control" id="author" name="author" asp-for="Author" required>
+            </div>
+            <div class="form-group">
+                <label for="genre">Genre</label>
+                <select class="form-control" id="genre" name="genre" asp-for="Genre" required>
+                    <option value="Educational Resources">Educational Resources</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Nonfiction">Nonfiction</option>
+                    <option value="Poetry">Poetry</option>
+                    <option value="Miscellaneous">Miscellaneous</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="availability">Availability</label>
+                <div class="form-row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="true" asp-for="Available" checked>
+                        <label class="form-check-label" for="available">
+                            Available
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="false" asp-for="Available">
+                        <label class="form-check-label" for="notAvailable">
+                            Not Available
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button> <a  class="btn btn-secondary ms-2" href="javascript:history.back()">Go Back</a>
+        </form>
+    </div>
+
+
+</body>
+</html>
+

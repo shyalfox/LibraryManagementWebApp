@@ -20,7 +20,22 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid  ">
                 <a class="navbar-brand me-5 ms-5"></a>
-                <a class="navbar-brand me-5 ms-5" asp-area="" asp-controller="Account" asp-action="LoginPage">LibraryManagementWebApp</a>
+                @if (!isAuthenticated)
+                {
+                    <a class="navbar-brand me-5 ms-5" href="">LibraryManagementWebApp</a>
+                }
+                @if (isAuthenticated)
+                {
+                    @if (isAdmin)
+                    {
+                        <a class="navbar-brand me-5 ms-5" asp-action="AdminHomePage" asp-controller="AdminHomePage">LibraryManagementWebApp</a>
+                    }
+                    else
+                    {
+                        <a class="navbar-brand me-5 ms-5" asp-action="StudentHomePage" asp-controller="StudentHomePage">LibraryManagementWebApp</a>
+                    }
+                }
+              
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,12 +46,7 @@
                         
                         @if (isAuthenticated)
                         {
-                            @if (isSuperAdmin)
-                            {
-                                <li class="nav-item me-2">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserAdmin" asp-action="AddUserAdmin">All Users</a>
-                                    </li>
-                            }
+                            
                             @if (isAdmin)
                             {
                                 <li class="nav-item me-2">
@@ -51,9 +61,7 @@
                             }
                             else
                             {
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Student/ListStudents">Account</a>
-                                </li>
+                                
                             }
                             <li class="nav-item me-5">
                                 <form method="post" asp-action="Logout" asp-controller="Account">
@@ -73,8 +81,10 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - LibraryManagementWebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="row justify-content-end">
+            <div class="col-auto me-5">
+                &copy; 2024 - Sanish Bal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

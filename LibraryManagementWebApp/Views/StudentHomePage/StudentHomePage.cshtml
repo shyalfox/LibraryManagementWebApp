@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        
+
+        a {
+            text-decoration: none;
+            color: inherit; /* Inherit color from parent element */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Big Title Centered -->
+        <div class="text-center">
+            <h1>Student Dashboard</h1>
+        </div>
+
+        <!-- Two Big Cards Wrapped with <a> -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <a  class="card-link" asp-action="ListBooks" asp-controller="Book" >
+                    <div class="card bg-light mb-3 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Browse Books</h5>
+                            <p class="card-text">Browse different books and check if it  is available</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a   class="card-link" asp-action="ListBorrow" asp-controller="Borrow">
+                    <div class="card bg-light mb-3 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Book Borrow Record</h5>
+                            <p class="card-text">Your  Book Borrow record with details</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </body>

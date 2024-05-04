@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model LibraryManagementWebApp.Models.AddBorrowViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Book Borrow</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Record Book Borrow</h2>
+        <form method="post">
+            <div class="form-group">
+                <label for="bookTitle">Book Id</label>
+                <input type="text" class="form-control" id="bookId" name="bookId" asp-for="BookId" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="studentId">Student Id</label>
+                <input type="text" class="form-control" id="studentId" name="studentId" asp-for="StudentId" required>
+            </div>
+            <div class="form-group">
+                <label for="borrowDate">Borrow Date</label>
+                <input type="date" class="form-control" id="borrowDate" name="borrowDate" asp-for="BorrowDate" required>
+            </div>
+           
+           
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a class="btn btn-secondary ms-2" href="javascript:history.back()">Go Back</a>
+        </form>
+    </div>
+
+
+
+</body>
+</html>
+

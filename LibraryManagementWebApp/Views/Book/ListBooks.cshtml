@@ -1,0 +1,70 @@
+﻿
+@{
+    bool isAdmin = User.IsInRole("Admin");
+
+}
+
+@model List<LibraryManagementWebApp.Models.Entities.Book>
+ 
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+  </br></br>
+<h1>Books</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Book Id</th>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Availability</th>
+            @if (isAdmin)
+            {
+                <th>Action</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.BookId</td>
+                <td>@book.BookTitle</td>
+                <td>@book.Author</td>
+                <td>@book.Genre</td>
+                <td>@if (@book.Available) { <p class="ms-3">Available</p>
+                    }
+                    else
+                    {
+                        <p>Not Available</p>
+                    }
+                </td>
+                @if(isAdmin){
+                <td class="text-right">
+                    <div class="d-inline">
+                        <a class="btn btn-primary" asp-controller="Book" asp-action="EditBooks" asp-route-id="@book.BookId">Edit</a>
+                        <form method="post" class="d-inline">
+                            <button type="submit" class="btn btn-danger ms-1" asp-action="DeleteBooks" asp-controller="Book" asp-route-bookId="@book.BookId">Delete</button>
+                        </form>
+                    </div>
+                </td>
+                }
+                </tr>
+               
+        }
+    </tbody>
+</table>
+@if (isAdmin)
+{
+    <a class="btn btn-secondary ms-2" asp-action="AdminHomePage" asp-controller="AdminHomePage">DashBoard</a>
+}
+else
+{
+    <a class="btn btn-secondary ms-2" asp-action="StudentHomePage" asp-controller="StudentHomePage">DashBoard</a>
+}
+

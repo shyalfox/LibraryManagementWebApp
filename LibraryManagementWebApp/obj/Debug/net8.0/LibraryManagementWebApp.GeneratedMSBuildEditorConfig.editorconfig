@@ -26,6 +26,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Ib21lUGFnZVxBZG1pbkhvbWVQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Sanish Bal/source/repos/LibraryManagementWebApp/LibraryManagementWebApp/Views/Book/AddBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xBZGRCb29rcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sanish Bal/source/repos/LibraryManagementWebApp/LibraryManagementWebApp/Views/Book/EditBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xFZGl0Qm9va3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sanish Bal/source/repos/LibraryManagementWebApp/LibraryManagementWebApp/Views/Book/ListBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xMaXN0Qm9va3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sanish Bal/source/repos/LibraryManagementWebApp/LibraryManagementWebApp/Views/Borrow/AddBorrow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9ycm93XEFkZEJvcnJvdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sanish Bal/source/repos/LibraryManagementWebApp/LibraryManagementWebApp/Views/Borrow/EditBorrow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9ycm93XEVkaXRCb3Jyb3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sanish Bal/source/repos/LibraryManagementWebApp/LibraryManagementWebApp/Views/Borrow/ListBorrow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9ycm93XExpc3RCb3Jyb3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Sanish Bal/source/repos/LibraryManagementWebApp/LibraryManagementWebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,8 +66,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sanish Bal/source/repos/LibraryManagementWebApp/LibraryManagementWebApp/Views/StudentHomePageController/StudentHomePage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudEhvbWVQYWdlQ29udHJvbGxlclxTdHVkZW50SG9tZVBhZ2UuY3NodG1s
+[C:/Users/Sanish Bal/source/repos/LibraryManagementWebApp/LibraryManagementWebApp/Views/StudentHomePage/StudentHomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudEhvbWVQYWdlXFN0dWRlbnRIb21lUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Sanish Bal/source/repos/LibraryManagementWebApp/LibraryManagementWebApp/Views/UserAdmin/AddUserAdmin.cshtml]
