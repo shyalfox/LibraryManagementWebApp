@@ -1,7 +1,7 @@
 # Library Management Web App
 
 
-A Library Management Web Application built with ASP.Net 8 MVC model using SQl Server 2022 as database.
+A Library Management Web Application built with ASP.Net 8 MVC model using SQL Server 2022 as database.
 
 
 
