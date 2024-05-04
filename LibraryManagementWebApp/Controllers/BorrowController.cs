@@ -59,17 +59,36 @@ namespace LibraryManagementWebApp.Controllers
             return RedirectToAction("ListBorrow", "Borrow");
         }
         [HttpGet]
-        public async Task<IActionResult> ListBorrow()
+        public async Task<IActionResult> ListBorrow(int searchTerm= 0)
         {
             // Get the current user's role from claims
             var roleClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role);
             var userRole = roleClaim?.Value; // This will contain the user's role, or null if not found
+           
+         
 
             // Check if the user is an admin
             if (userRole == "Admin")
             {
-                var borrowedbooks = await dbContext.BorrowedBooks.ToListAsync();
-                return View(borrowedbooks);
+                if (searchTerm == 0)
+                {
+                    var borrowedbooks = await dbContext.BorrowedBooks.ToListAsync();
+                    return View(borrowedbooks);
+                }
+                else
+                {
+                    var borrowedBooksQuery = dbContext.BorrowedBooks.Where(b => b.StudentId == searchTerm);
+
+                    // Apply search filter if search term is provided
+                  
+                    
+                       borrowedBooksQuery = borrowedBooksQuery.Where(b => b.StudentId == searchTerm);
+                    
+
+                    var borrowedBooks = await borrowedBooksQuery.ToListAsync();
+
+                    return View(borrowedBooks);
+                }
             }
             else
             {
@@ -140,5 +159,6 @@ namespace LibraryManagementWebApp.Controllers
             return RedirectToAction("ListBorrow", "Borrow");
 
         }
+
     }
 }

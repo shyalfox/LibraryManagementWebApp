@@ -28,9 +28,16 @@ else
             <label class="form-label">Author</label>
             <input type="text" class="form-control" asp-for="Author" />
         </div>
-        <div class="mt-3">
-            <label class="form-label"> Genre</label>
-            <input type="text" class="form-control" asp-for="Genre" />
+        <div class="form-group">
+            <label for="genre">Genre</label>
+            <select class="form-control" id="genre" name="genre" asp-for="Genre" required>
+                <option value="Fiction">Fiction</option>
+                <option value="Educational Resources">Educational Resources</option>
+               
+                <option value="Nonfiction">Nonfiction</option>
+                <option value="Poetry">Poetry</option>
+                <option value="Miscellaneous">Miscellaneous</option>
+            </select>
         </div>
         <div class="mt-3">
             <label class="form-label">Availability </label>

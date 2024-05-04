@@ -14,7 +14,16 @@
 }
   </br></br>
 <h1>Books</h1>
-
+<div class="row mb-3">
+    <div class="col">
+        <form asp-action="ListBooks" method="get">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search by Book Name" name="searchTerm">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+</div>
 <table class="table">
     <thead>
         <tr>

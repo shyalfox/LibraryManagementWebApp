@@ -5,7 +5,12 @@
 }
 @model List<LibraryManagementWebApp.Models.Entities.Admin>
 <h1>Admins</h1>
-
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
 <table class="table">
     <thead>
         <tr>

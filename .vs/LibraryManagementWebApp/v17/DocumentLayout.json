@@ -1,88 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|c:\\users\\sanish bal\\source\\repos\\librarymanagementwebapp\\librarymanagementwebapp\\views\\useradmin\\editadmins.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|solutionrelative:librarymanagementwebapp\\views\\useradmin\\editadmins.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|c:\\users\\sanish bal\\source\\repos\\librarymanagementwebapp\\librarymanagementwebapp\\views\\useradmin\\editstudents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|solutionrelative:librarymanagementwebapp\\views\\useradmin\\editstudents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|c:\\users\\sanish bal\\source\\repos\\librarymanagementwebapp\\librarymanagementwebapp\\views\\useradmin\\listadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|solutionrelative:librarymanagementwebapp\\views\\useradmin\\listadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|c:\\users\\sanish bal\\source\\repos\\librarymanagementwebapp\\librarymanagementwebapp\\views\\useradmin\\liststudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|solutionrelative:librarymanagementwebapp\\views\\useradmin\\liststudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EditAdmins.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\Views\\UserAdmin\\EditAdmins.cshtml",
-              "RelativeDocumentMoniker": "LibraryManagementWebApp\\Views\\UserAdmin\\EditAdmins.cshtml",
-              "ToolTip": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\Views\\UserAdmin\\EditAdmins.cshtml",
-              "RelativeToolTip": "LibraryManagementWebApp\\Views\\UserAdmin\\EditAdmins.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACUAAAB1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-04T09:55:41.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditStudents.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\Views\\UserAdmin\\EditStudents.cshtml",
-              "RelativeDocumentMoniker": "LibraryManagementWebApp\\Views\\UserAdmin\\EditStudents.cshtml",
-              "ToolTip": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\Views\\UserAdmin\\EditStudents.cshtml",
-              "RelativeToolTip": "LibraryManagementWebApp\\Views\\UserAdmin\\EditStudents.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACUAAAB1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-04T09:55:28.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ListAdmin.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\Views\\UserAdmin\\ListAdmin.cshtml",
-              "RelativeDocumentMoniker": "LibraryManagementWebApp\\Views\\UserAdmin\\ListAdmin.cshtml",
-              "ToolTip": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\Views\\UserAdmin\\ListAdmin.cshtml",
-              "RelativeToolTip": "LibraryManagementWebApp\\Views\\UserAdmin\\ListAdmin.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACMAAABpAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-04T09:54:58.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ListStudent.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\Views\\UserAdmin\\ListStudent.cshtml",
-              "RelativeDocumentMoniker": "LibraryManagementWebApp\\Views\\UserAdmin\\ListStudent.cshtml",
-              "ToolTip": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\Views\\UserAdmin\\ListStudent.cshtml",
-              "RelativeToolTip": "LibraryManagementWebApp\\Views\\UserAdmin\\ListStudent.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACUAAABpAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-04T09:54:04.847Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

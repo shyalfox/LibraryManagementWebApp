@@ -32,7 +32,12 @@ namespace LibraryManagementWebApp.Controllers
                 {
                     return RedirectToAction("StudentHomePage", "StudentHomePage");
                 }
+               
             }
+            
+            
+              
+            
 
             // If not authenticated, render the login page
             return View();
@@ -78,8 +83,7 @@ namespace LibraryManagementWebApp.Controllers
             }
             else
             {
-                // Authentication failed, display error message
-                ViewBag.ErrorMessage = "Invalid username or password";
+                TempData["SuccessMessage"] = "UseId or Password doesnot Match";
                 return View();
             }
         }

@@ -12,6 +12,20 @@
 }
   </br></br>
 <h1>Book Record</h1>
+@if (isAdmin)
+{
+    <div class="row mb-3">
+        <div class="col">
+            <form asp-action="ListBorrow" method="get">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search by Student Id" name="searchTerm">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+}
 
 <table class="table">
     <thead>

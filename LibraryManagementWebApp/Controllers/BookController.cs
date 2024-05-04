@@ -41,9 +41,20 @@ namespace LibraryManagementWebApp.Controllers
             return RedirectToAction("ListBooks", "Book");
         }
         [HttpGet]
-        public async Task<IActionResult> ListBooks()
+        public async Task<IActionResult> ListBooks(string searchTerm = "null")
         {
-            var books = await dbContext.Books.ToListAsync();
+            // Get all books initially
+            var booksQuery = dbContext.Books.AsQueryable();
+
+            // Apply search filter if search term is provided
+            if ((searchTerm != "null"))
+            {
+                // Filter books by title or any other relevant property
+                booksQuery = booksQuery.Where(b => b.BookTitle.Contains(searchTerm));
+            }
+
+            // Execute the query to retrieve the filtered list of books
+            var books = await booksQuery.ToListAsync();
 
             return View(books);
         }

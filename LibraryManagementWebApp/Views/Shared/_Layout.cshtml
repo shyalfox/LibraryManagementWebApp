@@ -13,22 +13,24 @@
     <title>@ViewData["Title"] - LibraryManagementWebApp</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    
     <link rel="stylesheet" href="~/LibraryManagementWebApp.styles.css" asp-append-version="true" />
+   
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid  ">
-                <a class="navbar-brand me-5 ms-5"></a>
+                <a class="navbar-brand me-5 ms-5 "></a>
                 @if (!isAuthenticated)
                 {
-                    <a class="navbar-brand me-5 ms-5" href="">LibraryManagementWebApp</a>
+                    <a class="navbar-brand me-5 ms-5 " href="">LibraryManagementWebApp</a>
                 }
                 @if (isAuthenticated)
                 {
                     @if (isAdmin)
                     {
-                        <a class="navbar-brand me-5 ms-5" asp-action="AdminHomePage" asp-controller="AdminHomePage">LibraryManagementWebApp</a>
+                        <a class="navbar-brand me-5 ms-5 " asp-action="AdminHomePage" asp-controller="AdminHomePage">LibraryManagementWebApp</a>
                     }
                     else
                     {

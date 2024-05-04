@@ -19,4 +19,11 @@
     <br />
     <button type="submit" class="btn btn-primary btn-block">Login</button>
 </form>
+</br>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
 </div>

@@ -49,6 +49,7 @@ namespace LibraryManagementWebApp.Controllers
 
                 await dbContext.Admins.AddAsync(admin);
                 await dbContext.SaveChangesAsync();
+                TempData["SuccessMessage"] = "New Admin added successfully.";
             }
             else
             {
@@ -61,16 +62,30 @@ namespace LibraryManagementWebApp.Controllers
                 };
                 await dbContext.Students.AddAsync(student);
                 await dbContext.SaveChangesAsync();
+                TempData["SuccessMessage"] = "New Student added successfully.";
 
             }
-           
-            return View();
+
+
+            return RedirectToAction("AddUserAdmin", "UserAdmin");
 
         }
         [HttpGet]
-        public async Task<IActionResult> ListStudent()
+        public async Task<IActionResult> ListStudent(string searchTerm = "null")
         {
-            var students = await dbContext.Students.ToListAsync();
+            
+            // Get all students initially
+            var studentQuery = dbContext.Students.AsQueryable();
+
+            // Apply search filter if search term is provided
+            if ((searchTerm != "null"))
+            {
+                // Filter books by title or any other relevant property
+              studentQuery = studentQuery.Where(b => b.StudentName.Contains(searchTerm));
+            }
+
+            // Execute the query to retrieve the filtered list of books
+            var students = await studentQuery.ToListAsync();
 
             return View(students);
         }
@@ -97,6 +112,7 @@ namespace LibraryManagementWebApp.Controllers
 
                 await dbContext.SaveChangesAsync();
             }
+            TempData["SuccessMessage"] = "Record Edited successfully.";
             return RedirectToAction("ListStudent", "UserAdmin");
 
         }
@@ -111,6 +127,7 @@ namespace LibraryManagementWebApp.Controllers
                 dbContext.Students.Remove(viewModel);
                 await dbContext.SaveChangesAsync();
             }
+            TempData["SuccessMessage"] = "Record Deleted successfully.";
             return RedirectToAction("ListStudent", "UserAdmin");
 
         }
@@ -131,7 +148,8 @@ namespace LibraryManagementWebApp.Controllers
 
                 await dbContext.SaveChangesAsync();
             }
-            return RedirectToAction("List", "UserAdmin");
+            TempData["SuccessMessage"] = "Record Edited successfully.";
+            return RedirectToAction("ListAdmin", "UserAdmin");
 
         }
         [HttpPost]
@@ -146,7 +164,7 @@ namespace LibraryManagementWebApp.Controllers
 
                 await dbContext.SaveChangesAsync();
             }
-
+            TempData["SuccessMessage"] = "Record Deleted successfully.";
             return RedirectToAction("ListAdmin", "UserAdmin");
 
         }

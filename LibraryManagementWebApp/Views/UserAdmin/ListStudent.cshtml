@@ -6,7 +6,22 @@
 @model List<LibraryManagementWebApp.Models.Entities.Student>
 
 <h1>Students</h1>
-
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+<div class="row mb-3">
+    <div class="col">
+        <form  asp-action="ListStudent" method="get">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search by Student Name" name="searchTerm">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+</div>
 <table class="table">
     <thead>
         <tr>
