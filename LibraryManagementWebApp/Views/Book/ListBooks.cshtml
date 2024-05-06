@@ -1,6 +1,7 @@
 ﻿
 @{
     bool isAdmin = User.IsInRole("Admin");
+    bool isAuthenticated = User.Identity.IsAuthenticated;
 
 }
 
@@ -68,12 +69,19 @@
         }
     </tbody>
 </table>
-@if (isAdmin)
+@if (!isAuthenticated)
 {
-    <a class="btn btn-secondary ms-2" asp-action="AdminHomePage" asp-controller="AdminHomePage">DashBoard</a>
+    <a class="btn btn-secondary ms-2" asp-action="LoginPage" asp-controller="Account">Login To Interact</a>
 }
 else
 {
-    <a class="btn btn-secondary ms-2" asp-action="StudentHomePage" asp-controller="StudentHomePage">DashBoard</a>
-}
+    @if (isAdmin)
+    {
+        <a class="btn btn-secondary ms-2" asp-action="AdminHomePage" asp-controller="AdminHomePage">DashBoard</a>
+    }
+    else
+    {
+        <a class="btn btn-secondary ms-2" asp-action="StudentHomePage" asp-controller="StudentHomePage">DashBoard</a>
+    }
 
+}

@@ -1,12 +1,84 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|c:\\users\\sanish bal\\source\\repos\\librarymanagementwebapp\\librarymanagementwebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|solutionrelative:librarymanagementwebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|c:\\users\\sanish bal\\source\\repos\\librarymanagementwebapp\\librarymanagementwebapp\\librarymanagementwebapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|solutionrelative:librarymanagementwebapp\\librarymanagementwebapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|c:\\users\\sanish bal\\source\\repos\\librarymanagementwebapp\\librarymanagementwebapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|solutionrelative:librarymanagementwebapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|c:\\users\\sanish bal\\source\\repos\\librarymanagementwebapp\\librarymanagementwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA64AB4E-0693-4756-B93A-DD5DD4B6B210}|LibraryManagementWebApp\\LibraryManagementWebApp.csproj|solutionrelative:librarymanagementwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LibraryManagementWebApp",
+              "DocumentMoniker": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\LibraryManagementWebApp.csproj",
+              "RelativeDocumentMoniker": "LibraryManagementWebApp\\LibraryManagementWebApp.csproj",
+              "ToolTip": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\LibraryManagementWebApp.csproj",
+              "RelativeToolTip": "LibraryManagementWebApp\\LibraryManagementWebApp.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-06T03:06:12.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "LibraryManagementWebApp\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\appsettings.Development.json",
+              "RelativeToolTip": "LibraryManagementWebApp\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-06T03:06:06.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\Program.cs",
+              "RelativeDocumentMoniker": "LibraryManagementWebApp\\Program.cs",
+              "ToolTip": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\Program.cs",
+              "RelativeToolTip": "LibraryManagementWebApp\\Program.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAQwDkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T03:05:59.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "LibraryManagementWebApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Sanish Bal\\source\\repos\\LibraryManagementWebApp\\LibraryManagementWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "LibraryManagementWebApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-06T03:00:17.187Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace LibraryManagementWebApp.Controllers
 {
-    [Authorize]
+   
     public class BookController : Controller
     {
         private readonly ApplicationDbContext dbContext;
